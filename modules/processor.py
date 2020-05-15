@@ -210,7 +210,7 @@ class inrange (Filter):
             
 
     def apply (self, img):
-        print(tuple(self.low_th), tuple(self.high_th))
+        #print(tuple(self.low_th), tuple(self.high_th))
         return cv2.inRange (img, tuple(self.low_th), tuple(self.high_th))
 
 #find bbox of the connected component with maximal area
@@ -301,12 +301,14 @@ class filter_connected_components (Filter):
     
     def set_area_low(self, value):
         self.area_low  = value
+        print(self.area_low)
     def set_area_high(self, value):
         self.area_high  = value
+        print(self.area_high)
         
     def set_hei_low(self, value):
         self.hei_low  = value
-    def set_area_low(self, value):
+    def set_hei_high(self, value):
         self.hei_high  = value
         
     def set_wid_low (self, value):
@@ -316,8 +318,10 @@ class filter_connected_components (Filter):
         
     def set_den_low (self,value):
         self.den_low  = value
+        print(self.den_low)
     def set_den_high(self,value):
         self.den_high  = value
+        print(self.den_high)
         
     
     
